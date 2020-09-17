@@ -1,0 +1,30 @@
+{
+    "name": "iovcases",
+    "version": "1",
+    "client": {
+        "organization": "Org1",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "Org1": {
+            "mspid": "Org1MSP",
+            "peers": [
+                "org1"
+            ]  
+        }
+    },
+    "peers": {
+        "org1": {
+            "url": "grpc://localhost:7051",
+            "grpcOptions":{
+                "hostnameOverride": "org1"
+            }
+        }
+    }
+}
